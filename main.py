@@ -48,7 +48,6 @@ app.layout = html.Div(children=[
     ),
     html.Div(id='output-container-date-picker-range'),
 
-
 generate_table(df)
 
 ])
@@ -76,9 +75,3 @@ def update_output(start_date, end_date):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
-
-
-
-# df.info()
-
-# print(df[23:29])
