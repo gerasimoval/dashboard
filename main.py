@@ -26,7 +26,15 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div(children=[
-    html.H4(children='GI DASHBOARD'),
+    html.H4(children='GI_DASHBOARD'),
+    dcc.Dropdown(
+        options=[
+            {'label': 'text1', 'value': 'txt1'},
+            {'label': 'text1', 'value': 'txt1'},
+            {'label': 'text1', 'value': 'txt1'}
+        ],
+        value='MTL'
+    ),
     generate_table(df)
 ])
 
