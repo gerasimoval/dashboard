@@ -67,7 +67,7 @@ def update_output(start_date, end_date):
         end_date_object = date.fromisoformat(end_date)
         end_date_string = end_date_object.strftime('%B %d, %Y')
         string_prefix = string_prefix + 'Конечная дата: ' + end_date_string
-    if len(string_prefix) == len('Вы выбрали: '):
+    if len(string_prefix) == len('Вы выбрали '):
         return 'Выберите дату, что бы увидеть здесь'
     else:
         return string_prefix
