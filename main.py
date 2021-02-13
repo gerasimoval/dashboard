@@ -51,6 +51,7 @@ app.layout = html.Div(children=[
 
 
 generate_table(df)
+
 ])
 
 
