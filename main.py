@@ -9,7 +9,6 @@ pd.options.display.max_rows = None
 
 df = pd.read_excel('test_data.xlsx', header=None)
 
-
 def generate_table(dataframe, max_rows=100):
     return html.Table(
         # Header
