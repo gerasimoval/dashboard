@@ -26,23 +26,18 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div(children=[
-    html.H4(children='GI_DASHBOARD'),
-    dcc.Dropdown(
+    html.H4(children='Параметры'),
+    dcc.Checklist(
         options=[
-            {'label': 'text1', 'value': 'txt1'},
-            {'label': 'text1', 'value': 'txt1'},
-            {'label': 'text1', 'value': 'txt1'}
+            {'label': 'Поручения', 'value': '1'},
+            {'label': 'Протоколы', 'value': '2'},
+            {'label': 'Служебные записки', 'value': '3'},
+            {'label': 'Показывать завершенные', 'value': '4'}
         ],
-        value='MTL'
+        value=['MTL', 'SF']
     ),
     generate_table(df)
 ])
 
 if __name__ == '__main__':
     app.run_server(debug=True)
-
-
-
-# df.info()
-
-# print(df[23:29])
