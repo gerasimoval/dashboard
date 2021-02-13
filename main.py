@@ -2,6 +2,8 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import pandas as pd
+from datetime import date
+import re
 
 pd.options.display.max_columns = None
 pd.options.display.max_rows = None
@@ -35,6 +37,15 @@ app.layout = html.Div(children=[
         ],
         value='MTL'
     ),
+
+    dcc.DatePickerRange(
+        id='date-range',
+        min_date_allowed=date(1990, 1, 1),
+        max_date_allowed=date(2021, 2, 13),
+        initial_visible_month=date(2012, 1, 1),
+        end_date=date(2021, 1, 1)
+    ),
+
     generate_table(df)
 ])
 
