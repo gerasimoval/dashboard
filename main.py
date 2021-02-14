@@ -52,7 +52,6 @@ generate_table(df)
 
 ])
 
-
 @app.callback(
     dash.dependencies.Output('output-container-date-picker-range', 'children'),
     [dash.dependencies.Input('my-date-picker-range', 'start_date'),
